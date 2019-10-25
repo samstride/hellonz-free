@@ -1,0 +1,104 @@
+@import "font";
+@import "root";
+@import "roberto";
+@import "align";
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    padding-top: 10px;
+}
+
+.mdc-top-app-bar--fixed-adjust {
+    padding-top: 128px;
+}
+
+.mdc-tab-indicator .mdc-tab-indicator__content--underline {
+    border-color: var(--mdc-theme-secondary);
+}
+
+.mdc-tab .mdc-tab__text-label,
+.mdc-tab--active .mdc-tab__text-label {
+    color: #fff;
+}
+
+.mdc-menu {
+    a.mdc-list-item__text {
+        color: var(--text-color);
+    }
+}
+
+.mdc-list-item__graphic {
+    color: var(--text-color);
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.image-responsive {
+    width: 100%;
+    height: auto;
+}
+
+.round-corners {
+    border-radius: 8px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.logo {
+    margin-left: 28px;
+    width: 44px;
+    height: 56px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.underline {
+    width: 100px;
+    height: 2px;
+    border-radius: 1px;
+    background: currentColor;
+    color: #9ccc65;
+    margin-top: 12px;
+}
+
+.container {
+    max-width: 1280px;
+}
+
+
+.mdc-fab {
+    margin: 8px;
+}
+
+.fast-animation {
+    -webkit-animation-duration: .5s !important;
+    animation-duration: .5s !important;
+}
+
+.full-width {
+    width: 100%;
+}

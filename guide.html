@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hello NZ - Guide</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/material-components-web.min.css">
+    <link rel="stylesheet" href="css/hellonz.min.css">
+</head>
+
+<body class="mdc-typography mdc-typography--body1">
+    <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <img alt="logo" class="logo" src="img/logo.png">
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <span class="mdc-top-app-bar__title x-center pl-0">Hello NZ</span>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                <div class="mdc-menu-surface--anchor">
+                    <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button top-right-menu"
+                        aria-label="Download">more_vert</button>
+                    <div class="mdc-menu mdc-menu-surface">
+                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+                            <li class="mdc-list-item" role="menuitem">Guide</li>
+                            <li class="mdc-list-item" role="menuitem">指南</a></li>
+                            <li class="mdc-list-divider" role="separator"></li>
+                            <li class="mdc-list-item" role="menuitem">About</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="mdc-top-app-bar__row">
+            <div class="mdc-tab-bar" role="tablist">
+                <div class="mdc-tab-scroller">
+                    <div class="mdc-tab-scroller__scroll-area">
+                        <div class="mdc-tab-scroller__scroll-content">
+                            <button class="mdc-tab" role="tab" aria-selected="false" tabindex="-1">
+                                <span class="mdc-tab__content">
+                                    <span class="mdc-tab__text-label">North Island</span>
+                                    <span class="mdc-tab-indicator">
+                                        <span
+                                            class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                    </span>
+                                </span>
+                                <span class="mdc-tab__ripple"></span>
+                            </button>
+                            <button class="mdc-tab mdc-tab" role="tab" aria-selected="false" tabindex="-1">
+                                <span class="mdc-tab__content">
+                                    <span class="mdc-tab__text-label">South Island</span>
+                                    <span class="mdc-tab-indicator">
+                                        <span
+                                            class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                    </span>
+                                </span>
+                                <span class="mdc-tab__ripple"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mdc-top-app-bar--fixed-adjust full-width">
+        <div class="mdc-layout-grid container">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                    <h1 class="mdc-typography--headline6">Driving Guide</h1>
+                    <div class="underline"></div>
+                </div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                    <ul class="mdc-list mdc-list--non-interactive">
+                        <li class="mdc-list-item">
+                            <span class="mdc-list-item__graphic material-icons" aria-hidden="true">directions_car</span>
+                            Please drive on the left hand side.
+                        </li>
+                    </ul>
+                </div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                    <h1 class="mdc-typography--headline6">Icon Guide</h1>
+                    <div class="underline"></div>
+                </div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                    <ul class="mdc-list mdc-list--non-interactive">
+                        <li class="mdc-list-item">
+                            <span class="mdc-list-item__graphic material-icons"
+                                aria-hidden="true">signal_cellular_alt</span>
+                            Cellular network nearby.
+                        </li>
+                        <li class="mdc-list-item">
+                            <span class="mdc-list-item__graphic material-icons" aria-hidden="true">wc</span>
+                            Toilets nearby.
+                        </li>
+                        <li class="mdc-list-item">
+                            <span class="mdc-list-item__graphic material-icons" aria-hidden="true">local_drink</span>
+                            Drinking water nearby.
+                        </li>
+                        <li class="mdc-list-item">
+                            <span class="mdc-list-item__graphic material-icons" aria-hidden="true">restaurant</span>
+                            Cafe nearby.
+                        </li>
+                        <li class="mdc-list-item">
+                            <span class="mdc-list-item__graphic material-icons" aria-hidden="true">accessible</span>
+                            Wheelchair or stroller access possible.
+                        </li>
+                        <li class="mdc-list-item">
+                            <span class="mdc-list-item__graphic material-icons" aria-hidden="true">terrain</span>
+                            View from a peak or a high point.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/material-components-web.min.js"></script>
+    <script>
+        mdc.autoInit();
+
+        var menuElement = document.querySelector('.mdc-menu');
+        var menu = new mdc.menu.MDCMenu(menuElement);
+        menu.setAnchorCorner(mdc.menuSurface.Corner.BOTTOM_START);
+        var menuButton = document.querySelector('.top-right-menu');
+        menuButton.addEventListener('click', function () {
+            menu.open = !menu.open;
+        });
+
+        menuElement.addEventListener('MDCMenu:selected', function (event) {
+            console.log(event.detail);
+            if (event.detail.index === 0) {
+                window.location.href = 'guide.html';
+            }
+            if (event.detail.index === 1) {
+                window.location.href = 'guide-cn.html';
+            }
+            if (event.detail.index === 2) {
+                window.location.href = 'about.html';
+            }
+        });
+
+        var tabBar = new mdc.tabBar.MDCTabBar(document.querySelector('.mdc-tab-bar'));
+        tabBar.listen('MDCTabBar:activated', function (event) {
+            var index = event.detail.index;
+            if (index === 0) {
+                window.location.href = 'nz.html';
+            } else if (index === 1) {
+                window.location.href = 'nz.html#si';
+            }
+        });
+    </script>
+</body>
+
+</html>
